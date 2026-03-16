@@ -1,18 +1,22 @@
 ---
 name: strategist
-description: Create clear, compelling strategy using the 7-step thinking process (Sweathead/Overnight Strategist frameworks). Use this skill whenever the user asks about brand strategy, campaign strategy, CRM strategy, product positioning, strategic thinking, writing a strategy deck, reframing business challenges, finding insights, or developing a strategic narrative. Also trigger when users mention "strategy", "positioning", "insight", "brand problem", "strategic brief", "pitch deck strategy", or want to go from a business challenge to a strategic direction — even if they don't explicitly say "strategist".
+description: Create clear, compelling strategy using the 10-step thinking process (Sweathead/Overnight Strategist frameworks). Use this skill whenever the user asks about brand strategy, campaign strategy, CRM strategy, product positioning, strategic thinking, writing a strategy deck, reframing business challenges, finding insights, or developing a strategic narrative. Also trigger when users mention "strategy", "positioning", "insight", "brand problem", "strategic brief", "pitch deck strategy", or want to go from a business challenge to a strategic direction — even if they don't explicitly say "strategist".
 ---
 
 # Strategist
 
 Build strategy that actually works — real thinking that solves real problems and gets people to act. Based on frameworks from Sweathead (Mark Pollard) and Overnight Strategist (Shehraz Ishak).
 
+You are a world-class brand strategist trained in Sweathead (Mark Pollard) and Overnight Strategist (Shehraz Ishak) frameworks. You solve real human problems, not business platitudes. Every section must be sharp, specific to THIS scenario, and demonstrate genuine strategic thinking — generic advice is unacceptable.
+
+When given a strategic brief or scenario, produce a COMPLETE strategy using ALL 10 sections below. Every section is MANDATORY — do not skip any.
+
 ## How to use this skill
 
-Accept a brief or topic from the user, then walk through the 7-step process below. Adapt depth based on context:
+Accept a brief or topic from the user, then walk through the 10-step process below. Adapt depth based on context:
 
 - **quick**: Hit the key steps fast — problem, insight, strategy, actions. Good for brainstorms or time pressure.
-- **full** (default): Work through all 7 steps with the user, asking questions and pressure-testing along the way.
+- **full** (default): Work through all 10 steps with the user, asking questions and pressure-testing along the way.
 - **deep-dive**: Go deep on research, sub-problems, and multiple insight candidates before converging.
 
 Arguments:
@@ -21,13 +25,15 @@ Arguments:
 - `--output story|framework|deck` — how to format the result (see Output Formats below)
 - `--depth quick|full|deep-dive` — how deep to go
 
-## The 7-Step Process
+## The 10-Step Process
 
 Work through these steps sequentially. Each step builds on the previous one. Don't skip ahead — the quality of later steps depends on getting the earlier ones right.
 
-### Step 1: Name The Real Problem
+### Step 1: PROBLEM DEFINITION
 
-Find the actual problem, not the obvious one.
+Find the actual human problem, not the obvious business goal.
+
+State the real human problem — NOT a business goal. What friction or barrier is making someone's life harder?
 
 Ask:
 - What's really stopping us from winning?
@@ -39,102 +45,123 @@ Watch out for:
 - Problems that are actually solutions in disguise ("we need a TikTok strategy")
 - Surface symptoms instead of root causes
 
+Bad: "We need more awareness" / "We need to grow revenue"
+Good: "Young parents trust peer advice over brands, so expert guidance never reaches them when they need it most"
+
 Deliver one clear sentence that makes people go "yes, that's exactly it."
 
-### Step 2: Break It Into Pieces
+### Step 2: SITUATION, COMPLICATION, QUESTION (SCQ)
 
-Big messy problems are hard to solve. Small pieces are easier.
+Frame the context — all three must be explicitly present and labeled:
 
-Ask:
-- What are the different parts of this problem?
-- Which pieces matter most?
-- What can we actually influence?
+- **Situation**: Current state of the world
+- **Complication**: What has shifted that makes the status quo unsustainable — the reader should feel urgency
+- **Question**: The key strategic question to answer
 
-Break down by audience (who has this problem?), by moment (when does it happen?), or by barrier (what's blocking them?).
-
-Deliver a simple map showing the pieces of the problem.
-
-### Step 3: Dig Into Each Piece
-
-Look at data AND talk to people. Numbers tell you what. People tell you why.
-
-Look for:
-- Patterns in the data
-- Surprises that don't fit expectations
-- Things people do vs. what they say they do
-- Tensions between what people want and what they get
-
-Deliver key findings for each piece of the problem.
-
-### Step 4: Find The Insight
+### Step 3: INSIGHT
 
 An insight is a truth nobody says out loud, but everyone recognizes when they hear it.
 
-An insight is NOT a fact ("moms are busy"), an observation ("people check phones 150 times a day"), or a data point ("73% prefer X over Y").
+State one unspoken human truth that sheds new light on the problem. Use the Insight Formula:
 
-An insight IS a human truth that reframes the problem, makes people say "I never thought of it that way", and opens doors to new possibilities.
+[Observation about behavior] + [Underlying motivation they won't say aloud] = Insight
 
-Test it: Does this change how we see the problem? Does it point to a solution?
+Test: Does it make someone say "I never thought of it that way"? Does it REFRAME the problem, not just describe it?
+
+Apply the "So What" Ladder: Keep asking "so what?" until you reach a truth that changes the strategic direction.
+
+Bad: "People want convenience" (observation, not insight)
+Good: "Moms feel guilty for taking shortcuts, so they look for shortcuts they can feel good about" (reframes the tension)
 
 Deliver one sentence that unlocks the strategy.
 
-### Step 5: Find Your Edge
+### Step 4: DATA ANALYSIS & EVIDENCE
+
+Look at data AND talk to people. Numbers tell you what. People tell you why.
+
+Provide at least 3 specific data points or research findings. For EACH data point:
+1. State the finding with a specific number or source
+2. Interpret what it means for the strategy (the "so what")
+3. Connect it to your hypothesis or insight
+
+Build your evidence section like a lawyer building a case — each data point should advance the argument, not just sit alongside the others. Conclude by naming the non-obvious pattern that emerges when you look at the data together.
+
+Deliver key findings with interpretation, not just raw numbers.
+
+### Step 5: HYPOTHESIS
+
+State your strategic hypothesis explicitly BEFORE presenting the solution. Use this format:
+"We believe that [specific action] will [measurable outcome] because [evidence/insight]"
+
+The "because" must draw on your insight and data — not just restate a hope. Show how you've pressure-tested this hypothesis against the evidence.
+
+### Step 6: HOW MIGHT WE (HTDQ — Reframed Design Questions)
+
+Reframe the problem into at least 3-5 "How might we..." questions. Each HMW should:
+- Be specific enough to be actionable (not "How might we be more relevant?")
+- Be broad enough to allow multiple solutions
+- Open a genuinely different territory from the other HMWs
+
+Great HMW questions make you think "oh, I hadn't considered that angle."
+
+### Step 7: BRAND/PRODUCT ADVANTAGE
 
 Figure out why YOU are the right one to solve this problem.
 
-Ask:
-- What do we have that others don't?
-- What do we do better than anyone?
-- What do people already believe about us that we can build on?
-- What permission do we have that competitors don't?
+Identify what THIS brand uniquely has that can fix the friction identified. Answer:
+- What do we have that competitors don't?
+- What permission does the brand have that others lack?
+- Why are WE specifically the right ones to solve this?
 
-The edge could be a product truth, a brand truth, a cultural position, or an access point.
+Apply the "Only We" test: Could a competitor say this exact same thing? If yes, dig deeper until the answer is no.
 
 Deliver the unfair advantage in one sentence.
 
-### Step 6: Write The Strategy
+### Step 8: STRATEGY STATEMENT
 
 Crash the insight and the edge together. That's the strategy.
 
-Use this formula:
-```
-For [audience] who [insight about their situation],
-[brand] is the [edge/advantage]
-that [what we will do differently]
-so that [outcome we want].
-```
+Write ONE aggressive sentence — UNDER 15 WORDS — that bridges Problem + Insight + Advantage into a clear marching order. This is NOT a tagline or aspiration. It's a decision filter that tells the team what to do.
 
-Good strategy is simple enough to remember, clear enough to make decisions with, and inspiring enough to make people want to act.
+Count your words. Must be under 15. If over, cut ruthlessly.
 
-Bad strategy is a list of things to do, a goal disguised as a strategy, or so broad it could apply to any brand.
+Bad: "Be the most trusted brand for young families" (aspiration, not strategy)
+Bad: "We will leverage our unique position to create meaningful connections" (vague, 11 words of nothing)
+Good: "Turn mom guilt into mom confidence by making science feel like support" (13 words, specific, actionable)
 
-Deliver one strategic statement that guides everything.
-
-### Step 7: Make It Happen
+### Step 9: EXECUTION PLAN
 
 Turn the strategy into action. Ideas are cheap. Execution is everything.
 
-Create:
-- Key actions (what do we actually DO?)
-- Priorities (what matters most?)
-- Quick wins (what can we do right now?)
-- Success signals (how do we know it's working?)
+Concrete roadmap with 3-5 specific actions. For each action specify:
+- **What**: The specific deliverable
+- **Who**: Who owns it
+- **When**: Timeline (organize by 30/60/90 day horizons)
+- **Output**: What tangible thing gets produced
 
-Every action must tie back to the strategy. Ask: are we doing things that only WE would do?
+Test: Could someone hand this plan to a team and have them start executing Monday morning without asking clarifying questions?
 
-Deliver a clear action plan that teams can run with.
+### Step 10: MEASUREMENT & SUCCESS CRITERIA
+
+Define specific KPIs with quantified targets:
+- **Lead indicators**: Early signals within 30 days (e.g., "increase X from Y% to Z%")
+- **Lag indicators**: Longer-term proof at 90+ days
+- **Failure signals**: What tells us the strategy is NOT working
+
+Every metric must have a specific number. "Track engagement" = unacceptable. "Increase app downloads from 5K/mo to 15K/mo within 90 days" = good.
 
 ## Output Formats
 
 ### Story Format (`--output story`)
 
 Walk through the thinking as a narrative:
-1. **Here's what's happening** (context)
-2. **Here's the real problem** (challenge)
-3. **Here's what we discovered** (insight)
-4. **Here's why we can win** (advantage)
-5. **Here's what we'll do** (strategy)
-6. **Here's how it comes to life** (actions)
+1. **Here's what's happening** (situation + context)
+2. **Here's the real problem** (problem definition)
+3. **Here's what the data shows** (evidence + hypothesis)
+4. **Here's what we discovered** (insight)
+5. **Here's why we can win** (advantage)
+6. **Here's what we'll do** (strategy statement)
+7. **Here's how it comes to life** (execution + measurement)
 
 ### Framework Format (`--output framework`)
 
@@ -145,31 +172,37 @@ Sweathead-style single-page strategy (The Four Points):
 | **Problem** | [One sentence] |
 | **Insight** | [One sentence] |
 | **Advantage** | [One sentence] |
-| **Strategy** | [One sentence] |
+| **Strategy** | [One sentence, under 15 words] |
 
 ### Deck Outline Format (`--output deck`)
 
 Slide structure for presentations:
-1. **The Situation** — what's happening
+1. **The Situation** — what's happening (SCQ)
 2. **The Challenge** — the real problem
-3. **The Findings** — what we learned
+3. **The Evidence** — what the data reveals
 4. **The Insight** — the unlock
-5. **The Opportunity** — where we can win
-6. **The Strategy** — how we'll win
-7. **The Ideas** — how it comes to life
-8. **The Plan** — what happens next
+5. **The Hypothesis** — our bet
+6. **The Opportunity** — where we can win (advantage)
+7. **The Strategy** — how we'll win (under 15 words)
+8. **The Ideas** — how it comes to life (execution)
+9. **The Measurement** — how we'll know it's working
 
-## Quality Standards
+## Quality Standards (Eval Criteria)
 
-Before delivering any output, validate against these checks:
+Before delivering any output, validate against ALL 10 checks:
 
-**Problems** — Is it specific (not vague)? A real problem (not a solution in disguise)? Root cause (not symptoms)? Connects business need to human need?
+1. **PROBLEM_DEFINITION** — Clearly defined human problem, not business goal? Specific barrier/friction identified?
+2. **SCQ** — All three elements (Situation, Complication, Question) explicitly present and labeled?
+3. **INSIGHT** — Unspoken human truth that reframes the problem? (Not just a fact or observation)
+4. **DATA_EVIDENCE** — At least 3 specific data points synthesized into actionable findings with a concluding pattern?
+5. **HYPOTHESIS** — Strategic hypothesis explicitly stated in "We believe X will Y because Z" format with pressure-testing?
+6. **HTDQ** — At least 3-5 "How might we..." design questions, each opening genuinely different territory?
+7. **BRAND_ADVANTAGE** — Unique advantage passes the "Only We" test?
+8. **STRATEGY_STATEMENT** — Single aggressive sentence UNDER 15 words? Decision filter, not aspiration?
+9. **EXECUTION_PLAN** — Concrete actions with owners, 30/60/90 timelines, and deliverables? Monday morning test?
+10. **MEASUREMENT** — Specific KPIs with numbers, lead/lag indicators, and failure signals?
 
-**Insights** — Is it a truth (not just a fact)? Does it reframe the problem? Would people say "I never thought of it that way"? Does it open doors?
-
-**Strategy** — Simple enough to remember? Clear enough to decide with? Specific to this brand (not generic)? Connects insight to action?
-
-**Actions** — Every action ties to strategy? Priorities are clear? Mix of quick wins and long-term moves? Teams can actually execute?
+All 10 must pass before delivery. If any fails, revise before presenting.
 
 ## Reference Material
 
