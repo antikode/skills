@@ -1,0 +1,65 @@
+# Antikode AWS Topology Tiers — Website Revamp
+
+Three standard infrastructure tiers for Antikode web revamp projects. Choose based on complexity classification.
+
+---
+
+## Tier 1 — Simple
+
+**Use for:** Brochure sites, landing pages, low-traffic company sites, blogs. Migrating from shared hosting or basic WordPress. No complex integrations, no user accounts.
+
+| Component | AWS Spec | Est. Monthly Cost |
+|---|---|---|
+| Web Server (FE + CMS combined) | 1× EC2 t3.small (2 vCPU, 2 GB RAM) | $23.70 |
+| Storage | S3 Standard (media/assets) | Included in estimate |
+| **Total** | | **$23.70/mo** |
+
+- **Capacity:** ~50 concurrent users/sec
+- **Notes:** Single EC2 instance running both Next.js and Laravel. No load balancer. Suitable for < 10k monthly visits. Add RDS separately if DB isolation is needed (adds ~$15–20/mo for db.t3.micro). CloudFront CDN for static assets.
+
+---
+
+## Tier 2 — Medium
+
+**Use for:** Marketing sites, content portals, sites with user accounts or CRM integrations. Migrating from mid-size WordPress/Drupal. Moderate traffic with campaign spikes.
+
+| Component | AWS Spec | Est. Monthly Cost |
+|---|---|---|
+| Frontend Servers | 2× EC2 t3.medium (Next.js) | $60.00 |
+| CMS Server | 1× EC2 t3.medium (Laravel) | $30.00 |
+| Database | 1× RDS db.t3.medium (MySQL) | $29.00 |
+| Load Balancer | 1× AWS ALB | $8.50 |
+| Storage | S3 Standard | $6.00 |
+| **Total** | | **$133.50/mo** |
+
+- **Capacity:** 200–300 concurrent users/sec
+- **Notes:** Separate FE and CMS layers. ALB distributes FE traffic. RDS for managed DB with automated backups. Add ElastiCache t3.micro for Redis if needed (+~$15/mo). Suitable for up to ~100k monthly visits.
+
+---
+
+## Tier 3 — Advanced
+
+**Use for:** High-traffic portals, complex multi-integration sites, platforms requiring Go middleware or container orchestration (EKS). Migrating from enterprise CMS (AEM, Sitecore) or monolithic legacy stacks.
+
+| Component | AWS Spec | Est. Monthly Cost |
+|---|---|---|
+| Frontend Servers | 2× EC2 t3.large (Next.js) | $60.48 |
+| CMS Servers | 2× EC2 t3.large (Laravel) | $60.48 |
+| Database | 1× RDS db.t3.large (MySQL/PostgreSQL) | $29.00 |
+| Load Balancers | 2× AWS ALB (FE + CMS) | $17.00 |
+| Storage | S3 Standard | $4.00 |
+| **Total** | | **$170.94/mo** |
+
+- **Capacity:** 350–400 concurrent users/sec
+- **Notes:** Fully redundant FE and CMS layers with dedicated ALBs. RDS with Multi-AZ option available (+~$29/mo for HA). Redis ElastiCache recommended (+~$15/mo). CloudFront CDN recommended for global clients (+~$5–20/mo). For containerized workloads, EKS replaces EC2 — pricing varies based on node groups.
+
+---
+
+## Notes on All Tiers
+
+- Costs are estimates based on ap-southeast-1 (Singapore) pricing as of 2025. Actual costs may vary.
+- All tiers include S3 for media/static asset storage.
+- Add Route 53 (~$0.50/hosted zone + query costs) for DNS management.
+- SSL/TLS via AWS Certificate Manager (free with ALB/CloudFront).
+- Monitoring stack (Uptime Kuma, Grafana, Loki, Glitchtip) deployed on a shared ops EC2 instance — not billed per project.
+- For revamp projects, budget an additional one-time migration cost depending on data volume (typically estimated separately in the project scope).

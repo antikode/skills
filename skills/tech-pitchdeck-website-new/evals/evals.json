@@ -1,0 +1,23 @@
+{
+  "skill_name": "antikode-new-website",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "We're pitching to a local F&B chain (15 restaurants across Java). They want a new website to showcase their restaurants, allow online reservations, and run a loyalty program. Expected traffic is moderate — around 5,000 daily visits, peaking during promo campaigns. No e-commerce. They want a member portal where customers can check their points. Infrastructure will be managed by Antikode. We need the full tech section for the pitchdeck.",
+      "expected_output": "Full pitchdeck tech section with 5 sections: Tech Strategy, Proposed Stack (Next.js/Laravel/MySQL+Redis), Architecture, Topology Recommendation at Medium tier (~$133.50/mo) with Antikode-managed hosting note, and Security Framework with ISO 27001 mention.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Small law firm wants a simple company profile website. Just homepage, about page, practice areas, team page, and contact form. No user accounts. Traffic will be minimal — maybe 100 visits/day. They want to host it on their own AWS account.",
+      "expected_output": "Full pitchdeck tech section with 5 sections: Tech Strategy, Proposed Stack (simple Next.js/Laravel), Architecture diagram, Topology Recommendation at Simple tier (~$23.70/mo) with client-managed hosting note and handover documentation mention, and Security Framework.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Media company wants a content portal — news articles, video embeds, author profiles, newsletter subscription, and a search feature. Expecting 20,000 daily visits with spikes when breaking news drops. They also want integration with their existing Salesforce CRM. Client will host on their own AWS account but wants Antikode to handle setup.",
+      "expected_output": "Full pitchdeck tech section with 5 sections: Tech Strategy, Proposed Stack (Next.js/Laravel/MySQL+Redis+Salesforce integration), Architecture, Topology Recommendation at Medium or Advanced tier, client-hosted with setup/handover noted, and Security Framework.",
+      "files": []
+    }
+  ]
+}

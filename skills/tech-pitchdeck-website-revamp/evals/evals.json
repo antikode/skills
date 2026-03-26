@@ -1,0 +1,23 @@
+{
+  "skill_name": "pitchdeck-website-revamp",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "We're pitching a revamp to a property developer. Their current site is https://www.ayalaland.com.ph — please audit it and generate the full pitchdeck tech section.",
+      "expected_output": "Full pitchdeck with Section 1 (Tech Audit: stack fingerprint, PageSpeed scores for mobile+desktop, Core Web Vitals with ✅/⚠️/❌ grades, asset issues, security headers table, SEO table, audit summary) and Section 2 (Tech Strategy: revamp rationale, proposed stack table with Next.js/Laravel/MySQL, architecture diagram, topology recommendation with tier and costs from references/topology.md, data migration plan table, security framework table with ISO 27001 note).",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "We need a pitchdeck tech section for a university that wants to revamp their portal. No URL yet. The current site is built on Drupal 7 hosted on their own servers. Around 50,000 daily active students. Features needed: course catalog, student login, news, events, alumni directory. Integration with their SAP ERP system. They want Antikode to manage the infra on their AWS account. Timeline is 6 months.",
+      "expected_output": "Skill asks no URL questions (already answered) and proceeds to Section 1 using interview data (no live audit — stack summary from interview, no PageSpeed data, notes limitations). Section 2 proposes Advanced tier (~$170.94/mo) with EKS or EC2 t3.large, PostgreSQL for complex data, Go middleware for SAP integration, data migration plan covering Drupal content export/transform/import and media migration to S3, security framework. Client-managed AWS with setup/handover noted.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Audit this site for a pitchdeck: https://www.tokopedia.com. Small agency client wants to use it as a benchmark comparison — we're proposing a revamp for a smaller regional marketplace with similar needs. Expected traffic: 500 daily visits. No user accounts, just a product showcase. Antikode-managed.",
+      "expected_output": "Section 1 audits tokopedia.com (fingerprint: React/Next.js likely, CDN detected, security headers, SEO, PageSpeed). Section 2 classifies the client's actual project as Simple tier (low traffic, no auth) despite the benchmark being advanced — makes this distinction clear. Proposes Simple tier ($23.70/mo) with EC2 t3.small. Recommends Next.js + Laravel. Data migration plan is minimal (product content only, no complex schema).",
+      "files": []
+    }
+  ]
+}
